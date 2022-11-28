@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% extends "base.html"%}
+{% block nav_item_home %}active{% endblock nav_item_home %} 
+{% load staticfiles %}
+{% block body_block%}
+    <br><br> <br>
+    <div class ="row">
+        <div class = "col">
+              <div class="container mt-3">
+                <div class="card" style="width:400px">
+                  <img class="card-img-top" src="{% static "images/me2.jpg" %}" alt="Card image" height="350px">
+                  <div class="card-body">
+                    <h4 class="card-title">Vijayalakshmi VR</h4>
+                    <p class="card-text">Upskilling knowledge full-time @Lexicon  <br>
+                        Stockholm, Stockholm County, Sweden</p>
+                    
+                  </div>
+                </div>
+               </div>
+        </div>
+        </div>
+        <div class="fixed">
+            <p class="h1" style="font-size:50px"> An hardcore programmer with the thirst of learning new things! </p> <br>
+            <p><a href="{% url 'about' %}" class="btn btn-primary">See Profile</a> </p>
+        </div>
+
+     
+{% endblock %}

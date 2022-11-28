@@ -1,0 +1,49 @@
+
+{% extends "base.html"%}
+{% block nav_item_award %}active{% endblock nav_item_award %} 
+{% load staticfiles %}
+{% block body_block%}
+    <br><br> <br>
+ 
+<p class="top"></p>
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Awards - Infosys</h5>
+          
+          <p class="card-text">I was appreciated for my dedicated efforts!</p>
+          <a href="#Infy1" class="card-link">Crown Award</a>
+          <a href="#Infy2" class="card-link">Star Award</a>
+        </div>
+      </div>
+      <br>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Awards - Client</h5>
+          <p class="card-text">I was appreciated by the client Tesco !</p>
+          <a href="#Tesco1" class="card-link">Value Award1</a>
+          <a href="#Tesco2" class="card-link">Value Award2</a>
+        </div>
+      </div>
+    <br>
+    <p id="Infy1">
+    <img src="{% static "images/Infycrown.png" %}" alt="No Image Found" width="30%">
+    <a href="#top">Back To Top</a>
+    </p>
+    
+    <p id="Infy2">
+    <img src="{% static "images/Infystar.png" %}"  alt="No Image Found" width="30%">
+    <a href="#top">Back To Top</a>
+    </p>  
+     <p id="Tesco1">
+    <img src="{% static "images/Tesco1.png" %}" alt="No Image Found" width="30%">
+    <a href="#top">Back To Top</a>
+    </p>
+
+    <p id="Tesco2">
+    <img src="{% static "images/Tesco2.png" %}"  alt="No Image Found" width="30%">
+    <a href="#top">Back To Top</a>
+    </p> 
+
+ 
+
+{% endblock %}

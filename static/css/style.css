@@ -1,0 +1,33 @@
+body{
+   background-color:rgb(222, 237, 243);
+}
+
+label{
+   display:block;  
+}
+.navbar-light {
+   background-color:lightblue;
+}
+
+.nav-link {
+   color: black !important;
+   font-size:small;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.nav-item a:hover
+{
+   background-color: rgb(222, 237, 243);
+   color: black!important;
+}
+.nav-item a.active
+{
+   background-color: rgb(222, 237, 243);
+   color: white;
+}
+div.fixed{
+   position: relative;
+   bottom: 400px;
+   right: -500px;
+   width: 500px;
+   
+ }

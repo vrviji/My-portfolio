@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+   
+    <title></title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+           
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-left textcolor" 
+            id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                
+                <li class="nav-item">
+                    &emsp;&emsp;<img src="{% static "images/vr.png" %}" height="50px" alt="no image" height="100Px">                   
+                </li>
+                <li class="nav-item">
+                    <br>
+                    <b>| My</b>self |                
+                </li>
+            </ul>   
+            </div> 
+            <div class="collapse navbar-collapse justify-content-end textcolor" id="navbarSupportedContent">
+
+                <ul class="navbar-nav mr-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link 
+                        {% block nav_item_home %}{% endblock nav_item_home %}"
+                        href="{% url 'index' %}">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link 
+                        {% block nav_item_about %}{% endblock nav_item_about %}" href="{% url 'about' %}">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% block nav_item_skill %}{% endblock nav_item_skill %}" href="{% url 'skills' %}">SKILLS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% block nav_item_exp %}{% endblock nav_item_exp %}" href="{% url 'experience' %}">EXPERIENCE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% block nav_item_award %}{% endblock nav_item_award %}" href="{% url 'award' %}">AWARDS/RECOMMENDATIONS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% block nav_item_contact %}{% endblock nav_item_contact %}" href="{% url 'contact' %}">CONTACT</a>
+                    </li>
+                    <li class="nav-item">
+                       <a class = "nav-link" href="https://www.linkedin.com/in/vrviji/"> <img src="{% static "images/linkedin.png" %}" alt="No img found" width="30px"></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        {% block body_block %}
+        {% endblock %}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+
+</html>
